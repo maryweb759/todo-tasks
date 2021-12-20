@@ -1,8 +1,34 @@
-<a routerLink="/reactive">reactive form</a>
-<a routerLink="/driven"> driven form</a>
-<a routerLink="/details"> add details </a>
-<a routerLink="/parent"> task four</a>
-<a routerLink="/users"> task Five</a>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/reactive"> reactive form <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/driven"> driven form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/details"> task 1 and 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/parent"> task 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/adddata"> task 5</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/users"> share data between component using service</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
 
 <router-outlet></router-outlet> 
 

@@ -7,7 +7,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
- @Input() user:{name:string, job:string, status:string};
+  @Input() user:{name:string, job:string, status:string};
  @Input() id: number;
   constructor(private userService: UserService) { }
 

@@ -13,7 +13,7 @@
                   <div class="form-group">
                     <label for="usernameInput">firstname</label>
                     <input formControlName="firstname" type="text" class="form-control" id="firstnameInput" placeholder="Enter username">              
-                     <div class="text-danger" *ngIf="isValid('firstname')"> required</div>
+                     <div class="text-danger" *ngIf="isValid('firstname')"> firstname is required</div>
                     <div class="text-danger" *ngIf="form.controls.firstname.invalid && form.controls.firstname.touched"> 
                         Username should be less than 25 characters long.
                     </div>
@@ -46,7 +46,7 @@
                 <div class="form-group">
                   <label for="passwordInput">Password</label>
                   <input formControlName="password" type="password" class="form-control" id="passwordInput" placeholder="Enter Password">
-                  <div class="text-danger" *ngIf="isValid('password')"> lastname is required</div>
+                  <div class="text-danger" *ngIf="isValid('password')"> password is required</div>
                   <div class="text-danger" *ngIf="isMateched('password')"> password doent match</div>
 
                 </div>
@@ -81,7 +81,7 @@
             </div>
              
               <div class="form-group">
-                <label for="companyName">company name</label>
+                <label for="companyName"> role description </label>
                 <textarea formControlName="roleDescription" class="form-control" id="roleDescription" rows="3"></textarea>               
                  <div class="text-danger" *ngIf="isValid('roleDescription')"> role description name is required</div>
                  <div class="text-danger" *ngIf="form.controls.roleDescription.invalid && form.controls.roleDescription.touched"> 

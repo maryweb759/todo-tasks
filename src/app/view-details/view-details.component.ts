@@ -7,31 +7,34 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ViewDetailsComponent implements OnInit {
   
-  @Input() employes: Array<any> ;
-  Readmore:boolean = true; 
-  visible:boolean = false;
-  constructor() { }
-
-  toggleText(employee, index) {
-    console.log(index, employee); 
+  @Input() employes: any[]= [] ;
+  
+  constructor() {
     
-    /*
-    this.employes.map(emp => {
-      let displayMore = index.email === emp.email;
-      if(displayMore) {
-        this.Readmore = !this.Readmore;
-        this.visible = !this.visible;
-      } else {
-        return
-      }
-    })
-      
-   */
-    
-  }
+   }
 
   ngOnInit(): void {
-   
+    
+  this.employes.forEach(element => {
+      element.showAll = false;
+      console.log(element);
+      
+    });
   }
 
+
+  toggleMore(employe:any) {  
+   employe.showAll = true;
+   console.log(employe);
+  }
+    
+  toggLeless(employe:any) {  
+    employe.showAll = false ; 
+    console.log(employe);
+    
+   }
+
+  
+
+  
 }

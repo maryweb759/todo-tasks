@@ -15,4 +15,5 @@ export class ViewUserComponent implements OnInit {
     this.users = this.service.users
   }
 
+
 }

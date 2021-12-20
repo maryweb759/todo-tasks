@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/model/employee';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
+   
   username: string;
   userjob: string
   constructor(private userService: UserService) { }
@@ -16,4 +18,5 @@ export class AddUserComponent implements OnInit {
   addUser() {
    this.userService.addUser(this.username, this.userjob, 'active')
   }
+
 }

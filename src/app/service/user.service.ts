@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Employee } from '../model/employee';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,6 @@ export class UserService {
   users = [
     {name: 'mereim', job:'angular developper', status:'active'},
     {name: 'lina', job:'angular developper', status:'active'},
-    {name: 'sara', job:'angular developper', status:'active'},
 
   ]
   constructor() { } 

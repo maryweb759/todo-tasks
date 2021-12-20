@@ -9,10 +9,15 @@ export class ParentComponent implements OnInit {
  
   employees = []
   constructor() { }
-
+ 
   ngOnInit(): void {
     
-  }
+   
+      
+    }
+  
+  
+   
 // parent function 
 parentFunction(employe) {
  

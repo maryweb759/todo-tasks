@@ -12,26 +12,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employe of employes ; index as i ">
+      <tr *ngFor="let employe of employes ,index as i ">
+        <td> {{ i }}</td>
         <td> {{ employe.firstname }} </td>
         <td> {{employe.lastname }} </td>
         <td> {{employe.email }} </td>
         <td> {{employe.joiningDate | date:'fullDate' }} </td>
-        <td>
-            <ng-container *ngIf="!visible"> 
-                {{employe.roleDescription | cut: 30 }}
-              </ng-container>
-              <ng-container *ngIf="visible"> 
-                <div> 
-                  {{ employe.roleDescription }}
-                </div>
-            </ng-container>  
-              <button (click)="toggleText(employe, i)" class="read-more-button"> 
-                {{Readmore?"Read more": "Read less"}}
-              </button>
-                  
+        <td>   {{employe.roleDescription | cut:50:employe.showAll }}      
+          <button class="read-more-button" (click)="toggleMore(employe)" *ngIf="!employe.showAll"> show more </button> 
+          <button class="read-more-button" (click)="toggLeless(employe)" *ngIf="employe.showAll"> show less </button>
         </td>
-
+        
       </tr>
      
     </tbody> 

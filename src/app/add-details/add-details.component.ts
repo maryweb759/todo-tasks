@@ -23,7 +23,7 @@ export class AddDetailsComponent implements OnInit {
       password: new FormControl(null, Validators.required),
       cnfpass: new FormControl(null, this.passValidator),
       companyName: new FormControl(null, Validators.required),
-      roleDescription: new FormControl(null, [Validators.required, Validators.minLength(90)]),
+      roleDescription: new FormControl(null, [Validators.required]),
       joiningDate: new FormControl(null, Validators.required),
       
      
@@ -89,7 +89,9 @@ disableFuterDate() {
    // this.form.markAsTouched();
   }
 
-  
+  onReset() {
+    this.form.reset();
+  }
  
 
 }

@@ -15,6 +15,8 @@ import { ChildComponent } from './taskFour/child/child.component';
 import { UserComponent } from './taskFive/user/user.component';
 import { AddUserComponent } from './taskFive/add-user/add-user.component';
 import { ViewUserComponent } from './taskFive/view-user/view-user.component';
+import { ShareDataComponent } from './taskFive/share-data/share-data.component';
+import { ShowDataComponent } from './taskFive/show-data/show-data.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ViewUserComponent } from './taskFive/view-user/view-user.component';
     UserComponent,
     AddUserComponent,
     ViewUserComponent,
+    ShareDataComponent,
+    ShowDataComponent,
     
   ],
   imports: [

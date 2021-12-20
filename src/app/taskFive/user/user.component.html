@@ -1,9 +1,9 @@
 
- <div> 
-     <span> name: {{ user.name }} </span> 
-     <span> job: {{ user.job }} </span>
-     <span> isActive : {{ user.status }}</span> 
-     <button class="btn btn-sm btn-primary" (click)="onUpdateStatus('active')">set Active</button>
-     <button class="btn btn-sm btn-danger" (click)="onUpdateStatus('inactive')">set Inactive</button>
+ <div class="my-1"> 
+    <span> name: {{ user.name }} </span> 
+    <span> job: {{ user.job }} </span>
+    <span> isActive : {{ user.status }}</span> 
+    <button class="btn btn-sm btn-primary px-2" (click)="onUpdateStatus('active')">set Active</button>
+    <button class="btn btn-sm btn-danger" (click)="onUpdateStatus('inactive')">set Inactive</button>
 
- </div>
+</div>
