@@ -1,0 +1,16 @@
+<h1 class="bg-danger text-white text-center my-1"> to-do-list </h1> 
+
+<div class="py-1 flex justify-content-center"> 
+  <div  class="input-container bg-danger py-1 px-4 "> 
+    <input type="text" #task placeholder="add new task"> 
+    <button (click)="addTask(task.value)" type="button" class="btn btn-light"> ADD TASK </button>
+  </div>
+</div>
+
+<div  *ngFor="let item of list" class="my-1">
+  <div class="item-container bg-success">
+    <p> {{item.name }}</p>
+    <button  (click)="deleteItem(item.id)" type="button" class="btn btn-danger"> delete</button>
+  </div>
+ 
+</div>

@@ -1,0 +1,28 @@
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">firstname</th>
+        <th scope="col"> lastname </th>
+        <th scope="col"> email</th>
+        <th scope="col"> joiningDate </th>
+        <th scope="col"> roleDescription </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empy of employees ; index as i ">
+        <td> {{ empy.firstname }} </td>
+        <td> {{empy.lastname }} </td>
+        <td> {{ empy.email }} </td>
+        <td> {{ empy.joiningDate | date:'fullDate' }} </td>
+        <td> {{ empy.roleDescription | cut: 30 }} </td>
+        
+
+      </tr>
+     
+    </tbody> 
+  </table> 
+
+
+<app-child (parentFunction)="parentFunction($event)"> </app-child>

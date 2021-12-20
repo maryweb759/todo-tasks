@@ -1,0 +1,20 @@
+<p>reactive-form works!</p>
+<h1 class="bg-danger text-white text-center my-1"> to-do-list with reactive form </h1> 
+
+<div class="form-container bg-danger d-flex justify-content-center py-1"> 
+    <form  [formGroup]="todoForm" (ngSubmit)="addTask()"> 
+       <div class=" d-flex justify-content-center py-1">
+        <input type="text" class="form-control" formControlName="task" > 
+        <button type="submit"  class="btn btn-light text-success"> Add </button>
+       </div>
+        
+    </form> 
+</div>
+
+
+<div *ngFor="let task of tasks; index as i" class="item-container">
+    <div class="bg-success d-flex justify-content-between my-1 py-1 px-1"> 
+        <p class="text-white mr-2"> {{ task.task}}  </p> 
+        <button  (click)="deleteItem(i)" type="button" class="btn btn-danger "> delete</button>
+    </div>
+</div>

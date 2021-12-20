@@ -1,0 +1,40 @@
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">firstname</th>
+        <th scope="col"> lastname </th>
+        <th scope="col"> email</th>
+        <th scope="col"> joiningDate </th>
+        <th scope="col"> roleDescription </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employe of employes ; index as i ">
+        <td> {{ employe.firstname }} </td>
+        <td> {{employe.lastname }} </td>
+        <td> {{employe.email }} </td>
+        <td> {{employe.joiningDate | date:'fullDate' }} </td>
+        <td>
+            <ng-container *ngIf="!visible"> 
+                {{employe.roleDescription | cut: 30 }}
+              </ng-container>
+              <ng-container *ngIf="visible"> 
+                <div> 
+                  {{ employe.roleDescription }}
+                </div>
+            </ng-container>  
+              <button (click)="toggleText(employe, i)" class="read-more-button"> 
+                {{Readmore?"Read more": "Read less"}}
+              </button>
+                  
+        </td>
+
+      </tr>
+     
+    </tbody> 
+  </table> 
+  <br> 
+  <br> 

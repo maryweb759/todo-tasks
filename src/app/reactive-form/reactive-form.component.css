@@ -1,0 +1,4 @@
+.item-container, .form-container {
+    max-width: 500px;
+    margin: auto
+}
