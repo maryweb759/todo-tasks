@@ -12,6 +12,8 @@ import { ViewUserComponent } from './taskFive/view-user/view-user.component';
 import { ShareDataComponent } from './taskFive/share-data/share-data.component';
 import { ShowDataComponent } from './taskFive/show-data/show-data.component';
 import { AddUserComponent } from './taskFive/add-user/add-user.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { SibligComponent } from './siblig/siblig.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'reactive', pathMatch:'full'},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:'users', component: ViewUserComponent},
   {path:'adddata', component: ShareDataComponent},
   {path:'showdata', component: ShowDataComponent},
+  {path:'siblig', component: SibligComponent},
+  {path:'sibling2', component: Sibling2Component},
 
 ];
 

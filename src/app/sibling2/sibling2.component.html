@@ -1,0 +1,27 @@
+<div class="container"> 
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">firstname</th>
+            <th scope="col"> lastname </th>
+            <th scope="col"> email</th>
+            <th scope="col"> companyname </th>
+            <th scope="col"> roleDescription </th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td> {{ data.firstname }}</td>
+            <td> {{ data.lastname }} </td>
+            <td> {{ data.email }} </td>
+            <td> {{ data.companyName }} </td>
+            <td>   {{data.roleDescription | cut:50:data.showAll }}      
+                <button class="read-more-button" (click)="toggleMore(data)" *ngIf="!data.showAll"> show more </button> 
+                <button class="read-more-button" (click)="toggLeless(data)" *ngIf="data.showAll"> show less </button>
+              </td>            
+          </tr>
+         
+        </tbody> 
+      </table> 
+</div>
